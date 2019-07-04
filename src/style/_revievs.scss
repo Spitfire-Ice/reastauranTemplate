@@ -1,0 +1,57 @@
+.reviews {
+  min-height: 758px;
+  width: 100%;
+  background: url("../img/revievsBg.png") no-repeat center;
+  background-size: cover;
+}
+.reviews__wrapper {
+  max-width: 1600px;
+  height: 100%;
+  margin: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.reviews__content {
+  max-width: 770px;
+  width: 100%;
+  min-height: 557px;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  h2 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    color: #ffffff;
+
+  }
+  img{
+    margin-top: 20px;
+  }
+  p {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 25px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    max-width: 630px;
+    margin-top: 30px;
+  }
+  p:before, p:after {
+    content: '"';
+    font-size: 50px;
+    color: #ffffff;
+  }
+  .content__signature {
+    margin-top: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 45px;
+    color: #ffffff;
+  }
+}

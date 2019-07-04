@@ -1,7 +1,7 @@
 {
   "name": "botmagazine",
   "version": "1.0.0",
-  "description": "template for partfolio",
+  "description": "template for portfolio",
   "main": "index.js",
   "scripts": {
     "develop": "webpack-dev-server --mode development --open",
@@ -30,5 +30,7 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+
+  }
 }

@@ -3,15 +3,23 @@
   min-height: 710px;
   background: url("../img/secionBG1.png") no-repeat center;
   background-size: cover;
+  overflow: hidden;
 }
 .about__wrapper {
   max-width: 1600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
   .about__content {
     max-width: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 5px;
     h3 {
       font-family: 'Yeseva One', cursive;
       font-size: 36px;
@@ -33,6 +41,12 @@
     }
   }
   .about__image {
+    max-width: 570px;
+    max-height: 570px;
+    margin: 50px 5px;
 
+    img {
+
+    }
   }
 }
