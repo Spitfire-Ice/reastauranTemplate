@@ -6,21 +6,33 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>restauranTemplate</title>
+
 </head>
 <body>
 <header id="header">
   <div class="header__wrapper">
-    <nav>
-      <h1><a href="#header"><img src="./img/Logo.png" alt="logo" width="180" height="110"></a></h1>
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">igredients</a></li>
-        <li><a href="#">menu</a></li>
-        <li><a href="#">revievs</a></li>
-        <li><a href="#">reservations</a></li>
-      </ul>
-    </nav>
+
+    <div class="menu__wrapper">
+      <nav class="navigation" id="navigation">
+        <h1><a href="#header"><img  class="logo-img" src="./img/logo.png" alt=""></a></h1>
+        <div class="menu__mobile-button" id="mobileButton" onclick="menuToggleAction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <ul class="list" onclick="menuToggleAction()">
+          <li class="list__item"><a href="#header">home</a></li>
+          <li class="list__item"><a href="#about">about</a></li>
+          <li class="list__item"><a href="#ingredients">ingredients</a></li>
+          <li class="list__item"><a href="#price">menu</a></li>
+          <li class="list__item"><a href="#reviews">reviews</a></li>
+          <li class="list__item"><a href="#reserv">reservations</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+
     <div class="header__content">
       <article>
         <h2>the right ingredients<br>
@@ -37,7 +49,7 @@
   </div>
 </header>
 <main>
-  <section class="about" id="about">
+  <section data-scroll class="about" id="about">
     <div class="about__wrapper">
       <div class="about__content">
         <h3>Just the right food</h3>
@@ -54,7 +66,7 @@
 
     </div>
   </section>
-  <section class="ingredients" id="ingredients">
+  <section data-scroll class="ingredients" id="ingredients">
     <div class="ingredients__wrapper">
       <div class="ingredients__content">
         <h3>Fine ingredients</h3>
@@ -73,7 +85,7 @@
       </div>
     </div>
   </section>
-  <section class="price" id="price">
+  <section data-scroll class="price" id="price">
     <div class="price__wrapper">
       <div class="price__column">
         <h3>Appetisers</h3>
@@ -192,7 +204,7 @@
       </div>
     </div>
   </section>
-  <section class="reviews" id="reviews">
+  <section data-scroll class="reviews" id="reviews">
     <div class="reviews__wrapper">
       <div class="reviews__content">
         <h2>Guest Reviews</h2>
@@ -205,7 +217,7 @@
       </div>
     </div>
   </section>
-  <section class="reserv" id="reserv">
+  <section data-scroll class="reserv" id="reserv">
     <div class="reserv__wrapper">
       <div class="reserv__img">
         <img src="./img/reservImage1.png" width="270" height="507" alt="img">
@@ -282,5 +294,6 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </body>
 </html>

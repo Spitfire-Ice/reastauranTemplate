@@ -1,0 +1,120 @@
+/*toogle button*/
+.menu__mobile-button {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 5;
+  margin: 0 15px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.buttonChange .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.buttonChange .bar2 {
+  opacity: 0;
+}
+
+.buttonChange .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*menu style*/
+
+.menu__wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px; /*Height menu div*/
+}
+
+.navigation {
+  max-width: 1250px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
+.list__item {
+  margin: 0 25px;
+  color: #ffffff;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 21px;
+  font-weight: bold;
+  :hover{
+    border-bottom:2px solid #ffffff;
+  }
+}
+.list > li > a {
+  text-transform: capitalize;
+}
+@media screen and (min-width: 800px){
+  .menu__mobile-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  /*Menu*/
+  .list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    padding: 0;
+    margin: 0;
+    left: -100%;
+    top: 0;
+    transition-duration: 1s;
+    text-align: center;
+    text-transform: capitalize;
+
+  }
+  .menuAction > .list {
+    transition-duration: 2s;
+    left: 0;
+  }
+  .list__item {
+    margin: 25px;
+    font-size: 36px;
+  }
+
+  /*other adaptive*/
+  .header__content > h2 {
+    font-size: 54px;
+  }
+  .menu__wrapper {
+    height: 65px;
+  }
+  .logo-img {
+    transform: scale(0.5);
+    position: absolute;
+    top: -35%;
+    left: 0;
+
+  }
+}

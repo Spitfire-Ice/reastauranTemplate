@@ -10,40 +10,6 @@ header {
   height: 100%;
   margin: 0 auto;
 }
-nav {
-  height: 110px;
-  max-width: 1600px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 175px;
-  h1 {
-    color: #ffffff;
-    padding-top: 8px;
-  }
-  ul {
-    display: flex;
-    flex-direction: row;
-    height: 110px;
-    li {
-      margin: auto 15px;
-      padding: auto 10px;
-      font-family: 'Gentium Book Basic', serif;
-      font-size: 21px;
-      font-weight: bold;
-      text-transform: capitalize;
-      color: #ffffff;
-      height: 100%;
-      line-height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    li:hover {
-      border-top: 2px solid #ffffff;
-    }
-  }
-}
 .header__content {
   h2{
     font-family: 'Yeseva One', cursive;
@@ -51,6 +17,7 @@ nav {
     color: #ffffff;
     text-align: center;
     margin-top: 130px;
+    word-wrap: break-word;
   }
   .decorator {
     width: 100%;

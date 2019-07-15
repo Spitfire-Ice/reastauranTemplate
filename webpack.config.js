@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require ('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -8,7 +9,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: "bundle.[hash].js",
@@ -28,9 +29,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+
         }
       },
       {
@@ -66,7 +65,7 @@ module.exports = {
             options: {
               outputPath: 'img/',
               name: '[name].[ext]',
-              publicPath: '../img/',
+              publicPath: './img/',
               useRelativePaths: true
             },
           },
@@ -112,8 +111,12 @@ module.exports = {
       filename: './index.html',
     }),
     new ExtractSCSS({
-      filename: 'css/[name].[hash].css',
+      filename: '[name].[hash].css',
     }),
+    // new CopyWebpackPlugin([
+    //   { from: 'from/js/lib', to: 'js/lib' }
+    // ])
+
 
   ]
 
